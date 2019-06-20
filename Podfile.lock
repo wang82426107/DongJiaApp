@@ -7,17 +7,21 @@ PODS:
   - MQTTClient/Manager (0.15.2):
     - MQTTClient/Min
   - MQTTClient/Min (0.15.2)
+  - SDUserDefaults (1.0.5)
 
 DEPENDENCIES:
   - MQTTClient
+  - SDUserDefaults
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - MQTTClient
+    - SDUserDefaults
 
 SPEC CHECKSUMS:
   MQTTClient: 902c7bcac1501595f3d0b15178c7205b40331fb0
+  SDUserDefaults: 889a4780ae89adbde40cde090962b4c48b502371
 
-PODFILE CHECKSUM: 2071121dcb55a6d20c98df0d6aa52bac5b333d9f
+PODFILE CHECKSUM: e97ef8b48e3af2090deb53b9a931d6b4e58fa375
 
 COCOAPODS: 1.5.3

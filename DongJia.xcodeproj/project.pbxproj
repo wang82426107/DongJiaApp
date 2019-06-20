@@ -65,6 +65,7 @@
 		E16C7CE522BB63DF00DC13CC /* ZFRadarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = E16C7CC122BB63DF00DC13CC /* ZFRadarChart.m */; };
 		E16C7CE622BB63DF00DC13CC /* ZFWave.m in Sources */ = {isa = PBXBuildFile; fileRef = E16C7CC422BB63DF00DC13CC /* ZFWave.m */; };
 		E16C7CE722BB63DF00DC13CC /* ZFWaveChart.m in Sources */ = {isa = PBXBuildFile; fileRef = E16C7CC622BB63DF00DC13CC /* ZFWaveChart.m */; };
+		E16C7CEA22BB68A200DC13CC /* MQTTManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E16C7CE922BB68A200DC13CC /* MQTTManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -189,6 +190,8 @@
 		E16C7CC422BB63DF00DC13CC /* ZFWave.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFWave.m; sourceTree = "<group>"; };
 		E16C7CC522BB63DF00DC13CC /* ZFWaveChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFWaveChart.h; sourceTree = "<group>"; };
 		E16C7CC622BB63DF00DC13CC /* ZFWaveChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFWaveChart.m; sourceTree = "<group>"; };
+		E16C7CE822BB68A200DC13CC /* MQTTManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MQTTManager.h; sourceTree = "<group>"; };
+		E16C7CE922BB68A200DC13CC /* MQTTManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MQTTManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -330,6 +333,8 @@
 		E16C7C2C22BB5C5700DC13CC /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				E16C7CE822BB68A200DC13CC /* MQTTManager.h */,
+				E16C7CE922BB68A200DC13CC /* MQTTManager.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -750,6 +755,7 @@
 				E16C7CDD22BB63DF00DC13CC /* ZFCircle.m in Sources */,
 				E16C7C4D22BB5E3800DC13CC /* UIViewController+VFInsert.m in Sources */,
 				E16C7CCC22BB63DF00DC13CC /* ZFLabel.m in Sources */,
+				E16C7CEA22BB68A200DC13CC /* MQTTManager.m in Sources */,
 				E16C7C7122BB62A900DC13CC /* TYCircleCollectionViewLayout.m in Sources */,
 				E16C7CE622BB63DF00DC13CC /* ZFWave.m in Sources */,
 				E16C7C6122BB61EE00DC13CC /* MainViewController.m in Sources */,

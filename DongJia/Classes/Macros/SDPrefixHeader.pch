@@ -13,9 +13,11 @@
 #define AppVersion ([[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleVersionKey])
 
 //***********************OSS相关***************************//
-#define OSSBucketName @"file-tmp"
+#define AddressOfMQTTServer @"8iyfwyc.mqtt.iot.bj.baidubce.com"
 
-#define OSSSavePath @"tmp"
+#define PortOfMQTTServer 1883
+
+#define PortOfMQTTServerWithSSL 1884
 
 //***********************接口网络***************************//
 

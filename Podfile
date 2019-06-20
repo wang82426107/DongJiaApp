@@ -4,5 +4,7 @@ platform :ios, '9.0'
 target 'DongJia' do
 
   pod 'MQTTClient'
+  
+  pod 'SDUserDefaults'
 
 end
