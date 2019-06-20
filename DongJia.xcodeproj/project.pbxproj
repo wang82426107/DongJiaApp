@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8B25DD349385800CEEDE1864 /* libPods-DongJia.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 142A6ABF5534F00655DEE71E /* libPods-DongJia.a */; };
 		E16C7C1222BB56AB00DC13CC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E16C7C1122BB56AB00DC13CC /* AppDelegate.m */; };
-		E16C7C1522BB56AB00DC13CC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E16C7C1422BB56AB00DC13CC /* ViewController.m */; };
 		E16C7C1A22BB56B100DC13CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E16C7C1922BB56B100DC13CC /* Assets.xcassets */; };
 		E16C7C1D22BB56B100DC13CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E16C7C1B22BB56B100DC13CC /* LaunchScreen.storyboard */; };
 		E16C7C2022BB56B100DC13CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E16C7C1F22BB56B100DC13CC /* main.m */; };
@@ -66,6 +65,7 @@
 		E16C7CE622BB63DF00DC13CC /* ZFWave.m in Sources */ = {isa = PBXBuildFile; fileRef = E16C7CC422BB63DF00DC13CC /* ZFWave.m */; };
 		E16C7CE722BB63DF00DC13CC /* ZFWaveChart.m in Sources */ = {isa = PBXBuildFile; fileRef = E16C7CC622BB63DF00DC13CC /* ZFWaveChart.m */; };
 		E16C7CEA22BB68A200DC13CC /* MQTTManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E16C7CE922BB68A200DC13CC /* MQTTManager.m */; };
+		E16C7CED22BB848E00DC13CC /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E16C7CEC22BB848E00DC13CC /* UIView+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,8 +75,6 @@
 		E16C7C0D22BB56AB00DC13CC /* DongJia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DongJia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E16C7C1022BB56AB00DC13CC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E16C7C1122BB56AB00DC13CC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E16C7C1322BB56AB00DC13CC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E16C7C1422BB56AB00DC13CC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E16C7C1922BB56B100DC13CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E16C7C1C22BB56B100DC13CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E16C7C1E22BB56B100DC13CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -192,6 +190,8 @@
 		E16C7CC622BB63DF00DC13CC /* ZFWaveChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFWaveChart.m; sourceTree = "<group>"; };
 		E16C7CE822BB68A200DC13CC /* MQTTManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MQTTManager.h; sourceTree = "<group>"; };
 		E16C7CE922BB68A200DC13CC /* MQTTManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MQTTManager.m; sourceTree = "<group>"; };
+		E16C7CEB22BB848E00DC13CC /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		E16C7CEC22BB848E00DC13CC /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,6 +288,8 @@
 		E16C7C2922BB5C5700DC13CC /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				E16C7CEB22BB848E00DC13CC /* UIView+Extension.h */,
+				E16C7CEC22BB848E00DC13CC /* UIView+Extension.m */,
 				E16C7C4B22BB5E3800DC13CC /* NSArray+JSON.h */,
 				E16C7C3F22BB5E3700DC13CC /* NSArray+JSON.m */,
 				E16C7C3722BB5E3600DC13CC /* UIButton+EdgeInsets.h */,
@@ -378,8 +380,6 @@
 				E16C7C5B22BB61A800DC13CC /* Base */,
 				E16C7C5922BB615C00DC13CC /* Main */,
 				E16C7C5A22BB616400DC13CC /* Element */,
-				E16C7C1322BB56AB00DC13CC /* ViewController.h */,
-				E16C7C1422BB56AB00DC13CC /* ViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -726,7 +726,6 @@
 				E16C7CD322BB63DF00DC13CC /* ZFMethod.m in Sources */,
 				E16C7CC922BB63DF00DC13CC /* UIBezierPath+Zirkfied.m in Sources */,
 				E16C7CDC22BB63DF00DC13CC /* ZFHorizontalBarChart.m in Sources */,
-				E16C7C1522BB56AB00DC13CC /* ViewController.m in Sources */,
 				E16C7CE222BB63DF00DC13CC /* ZFTranslucencePath.m in Sources */,
 				E16C7CD422BB63DF00DC13CC /* ZFBar.m in Sources */,
 				E16C7CD822BB63DF00DC13CC /* ZFGenericAxis.m in Sources */,
@@ -761,6 +760,7 @@
 				E16C7C6122BB61EE00DC13CC /* MainViewController.m in Sources */,
 				E16C7C4E22BB5E3800DC13CC /* UIView+LBExtension.m in Sources */,
 				E16C7C5122BB5E3800DC13CC /* UIColor+HexStringColor.m in Sources */,
+				E16C7CED22BB848E00DC13CC /* UIView+Extension.m in Sources */,
 				E16C7C5E22BB61C100DC13CC /* BaseViewController.m in Sources */,
 				E16C7CD222BB63DF00DC13CC /* ZFConst.m in Sources */,
 				E16C7CE122BB63DF00DC13CC /* ZFPieChart.m in Sources */,

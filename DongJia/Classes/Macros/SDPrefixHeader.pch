@@ -12,12 +12,17 @@
 //***********************项目版本信息***************************//
 #define AppVersion ([[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleVersionKey])
 
-//***********************OSS相关***************************//
+//***********************MQTT相关***************************//
+
 #define AddressOfMQTTServer @"8iyfwyc.mqtt.iot.bj.baidubce.com"
 
 #define PortOfMQTTServer 1883
 
 #define PortOfMQTTServerWithSSL 1884
+
+#define MQTTUserName @"8iyfwyc/wwd"
+
+#define MQTTPassWord @"e628XWFkrZIEuad6"
 
 //***********************接口网络***************************//
 
@@ -76,10 +81,7 @@
 
 
 //主色
-#define KMainColor ([UIColor hexStringToColor:@"35c5c6"])
-
-//辅助主色
-#define KMainAssistColor ([UIColor hexStringToColor:@"453c4d"])
+#define KMainColor ([UIColor hexStringToColor:@"1296db"])
 
 //按钮高亮颜色
 #define KButtonHightColor ([UIColor hexStringToColor:@"5697e3"])
@@ -93,26 +95,9 @@
 //辅助⽂文字(查看更更多等)
 #define KDetailTextColor ([UIColor hexStringToColor:@"858585"])
 
-//底部未选中icon
-#define KTabbarNotSelectColor ([UIColor hexStringToColor:@"cacaca"])
-
 //背景灰色
 #define KGreyBackgroundColor ([UIColor hexStringToColor:@"f6f7f9"])
 
-//点赞颜色
-#define KLikeColor ([UIColor hexStringToColor:@"ea5959"])
-
-//图片文字颜色
-#define KImageTextColor ([UIColor hexStringToColor:@"ffffff"])
-
-//基本按钮控件
-#define KButtonNormalColor ([UIColor hexStringToColor:@"6baaf4"])
-
-//图片选择
-#define KImageSelectColor ([UIColor hexStringToColor:@"facc5f"])
-
-//分割线的颜色
-#define KlineColor ([UIColor hexStringToColor:@"f3f4f8"])
 
 //***********************字体大小***************************//
 
