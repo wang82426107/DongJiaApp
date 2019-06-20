@@ -82,17 +82,129 @@
 		E16C7C0F22BB56AB00DC13CC /* DongJia */ = {
 			isa = PBXGroup;
 			children = (
-				E16C7C1022BB56AB00DC13CC /* AppDelegate.h */,
-				E16C7C1122BB56AB00DC13CC /* AppDelegate.m */,
-				E16C7C1322BB56AB00DC13CC /* ViewController.h */,
-				E16C7C1422BB56AB00DC13CC /* ViewController.m */,
-				E16C7C1622BB56AB00DC13CC /* Main.storyboard */,
-				E16C7C1922BB56B100DC13CC /* Assets.xcassets */,
-				E16C7C1B22BB56B100DC13CC /* LaunchScreen.storyboard */,
-				E16C7C1E22BB56B100DC13CC /* Info.plist */,
-				E16C7C1F22BB56B100DC13CC /* main.m */,
+				E16C7C2622BB5C5700DC13CC /* Classes */,
 			);
 			path = DongJia;
+			sourceTree = "<group>";
+		};
+		E16C7C2622BB5C5700DC13CC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E16C7C2722BB5C5700DC13CC /* APPDelegate */,
+				E16C7C2822BB5C5700DC13CC /* General */,
+				E16C7C2C22BB5C5700DC13CC /* Helpers */,
+				E16C7C2D22BB5C5700DC13CC /* Macros */,
+				E16C7C2E22BB5C5700DC13CC /* Models */,
+				E16C7C2F22BB5C5700DC13CC /* Resources */,
+				E16C7C3022BB5C5700DC13CC /* Scenes */,
+				E16C7C3322BB5C5700DC13CC /* Vendors */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		E16C7C2722BB5C5700DC13CC /* APPDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				E16C7C1022BB56AB00DC13CC /* AppDelegate.h */,
+				E16C7C1122BB56AB00DC13CC /* AppDelegate.m */,
+				E16C7C1F22BB56B100DC13CC /* main.m */,
+				E16C7C1E22BB56B100DC13CC /* Info.plist */,
+				E16C7C1622BB56AB00DC13CC /* Main.storyboard */,
+			);
+			path = APPDelegate;
+			sourceTree = "<group>";
+		};
+		E16C7C2822BB5C5700DC13CC /* General */ = {
+			isa = PBXGroup;
+			children = (
+				E16C7C2922BB5C5700DC13CC /* Categories */,
+				E16C7C2A22BB5C5700DC13CC /* ViewControllers */,
+				E16C7C2B22BB5C5700DC13CC /* Views */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		E16C7C2922BB5C5700DC13CC /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		E16C7C2A22BB5C5700DC13CC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E16C7C2B22BB5C5700DC13CC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E16C7C2C22BB5C5700DC13CC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E16C7C2D22BB5C5700DC13CC /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Macros;
+			sourceTree = "<group>";
+		};
+		E16C7C2E22BB5C5700DC13CC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E16C7C2F22BB5C5700DC13CC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E16C7C1922BB56B100DC13CC /* Assets.xcassets */,
+				E16C7C1B22BB56B100DC13CC /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E16C7C3022BB5C5700DC13CC /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				E16C7C3122BB5C5700DC13CC /* ViewControllers */,
+				E16C7C3222BB5C5700DC13CC /* Views */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		E16C7C3122BB5C5700DC13CC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E16C7C1322BB56AB00DC13CC /* ViewController.h */,
+				E16C7C1422BB56AB00DC13CC /* ViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E16C7C3222BB5C5700DC13CC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E16C7C3322BB5C5700DC13CC /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vendors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,9 +446,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 76HE6TP5SH;
-				INFOPLIST_FILE = DongJia/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DongJia/Classes/APPDelegate/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dong.DongJia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -350,9 +465,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 76HE6TP5SH;
-				INFOPLIST_FILE = DongJia/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DongJia/Classes/APPDelegate/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dong.DongJia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
