@@ -1,0 +1,170 @@
+//
+//  SDPrefixHeader.pch
+//  Starrunning
+//
+//  Created by luying on 2017/5/10.
+//  Copyright © 2017年 Dong. All rights reserved.
+//
+
+#ifndef SDPrefixHeader_pch
+#define SDPrefixHeader_pch
+
+//***********************项目版本信息***************************//
+#define AppVersion ([[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleVersionKey])
+
+//***********************OSS相关***************************//
+#define OSSBucketName @"file-tmp"
+
+#define OSSSavePath @"tmp"
+
+//***********************接口网络***************************//
+
+//通用接口(正式)旧
+//#define KmainURL @"http://box.moduimen.com/api"
+
+//通用接口(正式)新
+#define KmainURL @"http://langbox.moduimen.com/api"
+
+//高德地图Key
+#define GaoDeMapKey @"260f6abb326c0a4dca595d1c28d1bd27"
+
+
+//#ifdef DEBUG
+//
+//#define NSLog(FORMAT, ...) fprintf(stderr,"%s:%d\t%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+//
+//#else
+//
+//#define NSLog(FORMAT, ...) nil
+//
+//#endif
+//
+
+//***********************尺寸相关***************************//
+
+#define StatusHeight  ([[UIApplication sharedApplication]statusBarFrame].size.height)
+
+#define NavigationBarHeight  (44.0f)
+
+#define TabBarHeight  (49.0f)
+
+#define KSafeBottomHeight(height) (IPHONE_XMore ? 34.0 + height : height)
+
+#define KNoSafeHeight [UIScreen mainScreen].bounds.size.height
+
+#define KmainHeight  ((KNoSafeHeight == 812 || KNoSafeHeight == 896) ? (KNoSafeHeight - 34) : KNoSafeHeight )
+
+#define KmainWidth  [UIScreen mainScreen].bounds.size.width
+
+#define KNormalEdgeDistance  (16.0f)
+
+#define KNormalViewDistance  (10.0f)
+
+#define WidthWithScanlWidth(scanlWidth) (scanlWidth * 1.0 * (KmainWidth)/375.0)//根据设计图宽度获取当前对应宽度
+
+#define ViewWidth (self.bounds.size.width)
+
+#define ViewHeight (self.bounds.size.height)
+
+//***********************颜色相关***************************//
+
+#define KRGBColor(R,G,B) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:1.0]
+
+#define KRGBAColor(R,G,B,A) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A]
+
+
+//主色
+#define KMainColor ([UIColor hexStringToColor:@"35c5c6"])
+
+//辅助主色
+#define KMainAssistColor ([UIColor hexStringToColor:@"453c4d"])
+
+//按钮高亮颜色
+#define KButtonHightColor ([UIColor hexStringToColor:@"5697e3"])
+
+//标题颜色
+#define KTitleTextColor ([UIColor hexStringToColor:@"2f2f2f"])
+
+//正文颜色
+#define KContentTextColor ([UIColor hexStringToColor:@"333333"])
+
+//辅助⽂文字(查看更更多等)
+#define KDetailTextColor ([UIColor hexStringToColor:@"858585"])
+
+//底部未选中icon
+#define KTabbarNotSelectColor ([UIColor hexStringToColor:@"cacaca"])
+
+//背景灰色
+#define KGreyBackgroundColor ([UIColor hexStringToColor:@"f6f7f9"])
+
+//点赞颜色
+#define KLikeColor ([UIColor hexStringToColor:@"ea5959"])
+
+//图片文字颜色
+#define KImageTextColor ([UIColor hexStringToColor:@"ffffff"])
+
+//基本按钮控件
+#define KButtonNormalColor ([UIColor hexStringToColor:@"6baaf4"])
+
+//图片选择
+#define KImageSelectColor ([UIColor hexStringToColor:@"facc5f"])
+
+//分割线的颜色
+#define KlineColor ([UIColor hexStringToColor:@"f3f4f8"])
+
+//***********************字体大小***************************//
+
+//标题字体
+#define KTitleTextFont ([UIFont systemFontOfSize:18])
+
+//副标题字体
+#define KSubheadTextFont ([UIFont systemFontOfSize:16])
+
+//正文字体
+#define KContentTextFont ([UIFont systemFontOfSize:14])
+
+//辅助字体
+#define KDetailTextFont ([UIFont systemFontOfSize:12])
+
+//提示字体
+#define KAlertTextFont ([UIFont systemFontOfSize:10])
+
+#define KBoldFont(textSize) (([UIFont fontWithName:@"PingFang-SC-Bold" size:(textSize)]) == nil?([UIFont fontWithName:@"Helvetica-Bold" size:(textSize)]):([UIFont fontWithName:@"PingFang-SC-Bold" size:(textSize)]))
+
+#define KAgencyFont(textSize) (([UIFont fontWithName:@"Agency-Bold" size:(textSize)]) == nil ? ([UIFont fontWithName:@"Helvetica-Bold" size:(textSize)]):([UIFont fontWithName:@"Agency-Bold" size:(textSize)]))
+
+#define KXinWeiFont(textSize) (([UIFont fontWithName:@"STXinwei" size:(textSize)]) == nil ? ([UIFont fontWithName:@"Helvetica-Bold" size:(textSize)]):([UIFont fontWithName:@"STXinwei" size:(textSize)]))
+
+//***********************设备相关***************************//
+
+#define MyUUID ([[UIDevice currentDevice].identifierForVendor UUIDString])
+
+//iPhone5
+#define IPHONE5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+
+//iPhone6
+#define IPHONE6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)
+
+//iPhone6 Plus
+#define IPHONE6_Plus ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : NO)
+
+//iPhoneX
+#define IPHONE_X (KmainHeight == 812.0f || KmainWidth == 812.0f) ? YES : NO
+
+//iPhoneX 或者 iPhoneX Max 或者 iPhoneX C
+#define IPHONE_XMore ((KNoSafeHeight == 812 || KNoSafeHeight == 896))
+
+//主要用于判断当前iOS版本号,对其弃用或者未出现的方法进行区别对待
+#define KcurrentSystemVersion [[UIDevice currentDevice] systemVersion]
+
+//弱引用
+#define KweakSelf(type)  __weak typeof(type) weak##type = type;
+
+//强引用
+#define KstrongSelf(type)  __strong typeof(type) type = weak##type;
+
+
+#import "UIColor+HexStringColor.h"
+
+#endif /* SDPrefixHeader_pch */
+
