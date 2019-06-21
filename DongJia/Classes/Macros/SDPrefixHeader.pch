@@ -32,11 +32,8 @@
 //指令主题 只可发送
 #define MQTTOrderTopic @"Order"
 
-//开关配置信息,只可订阅
-#define MQTTSwitchTopic @"Switch"
-
 //在线消息,发送与订阅
-#define MQTTOnlineTopic @"Online"
+#define MQTTClientTopic @"Client"
 
 //遗嘱消息,发送与订阅
 #define MQTTWillTopic @"Will"

@@ -8,6 +8,7 @@
 
 #import "OrderMenuDetailView.h"
 #import "UIView+Extension.h"
+#import "MQTTManager.h"
 
 @interface OrderMenuDetailView ()
 
@@ -83,16 +84,30 @@
     
     if (_switchButton == nil) {
         _switchButton = [[UIButton alloc] initWithFrame:CGRectMake(ViewWidth/3.0, self.detailsLabel.bottom, ViewWidth/3.0, 40.0f)];
+        [_switchButton setShowsTouchWhenHighlighted:NO];
         _switchButton.backgroundColor = [UIColor hexStringToColor:@"c0c0c0"];
         _switchButton.titleLabel.font = KContentTextFont;
         _switchButton.layer.cornerRadius = 20.0f;
         _switchButton.layer.masksToBounds = YES;
-        [_switchButton setTitle:@"未知" forState:UIControlStateDisabled];
-        [_switchButton setTitle:@"打开" forState:UIControlStateNormal];
-        [_switchButton setTitle:@"关闭" forState:UIControlStateSelected];
+        [_switchButton addTarget:self action:@selector(sendOpenOrCloseMessageAction:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _switchButton;
 }
+
+- (void)sendOpenOrCloseMessageAction:(UIButton *)sender {
+    
+    
+    NSDictionary *message = @{
+                              @"type":@(4),
+                              @"data":@{
+                                      @"clientID":self.dataModel.clientID,
+                                      @"switchID":self.dataModel.switchID,
+                                      @"isOn":sender.isSelected ? @(0) : @(1),
+                                      }
+                              };
+    [[MQTTManager defaultManager] sendMQTTMapMessage:message topic:MQTTOrderTopic];
+}
+
 
 - (void)setDataModel:(SwitchModel *)dataModel {
     
@@ -104,17 +119,20 @@
     switch (dataModel.state) {
 
         case SwitchStateUnknown:
+            [_switchButton setTitle:@"未知" forState:UIControlStateNormal];
             _switchButton.backgroundColor = [UIColor hexStringToColor:@"c0c0c0"];
             _detailsLabel.text = @"设备状态:未知";
             [_switchButton setEnabled:NO];
             break;
         case SwitchStateOpen:
+            [_switchButton setTitle:@"打开" forState:UIControlStateNormal];
             _switchButton.backgroundColor = [UIColor hexStringToColor:@"8deeee"];
             _detailsLabel.text = @"设备状态:关闭";
             _switchButton.selected = NO;
             [_switchButton setEnabled:YES];
             break;
         case SwitchStateClose:
+            [_switchButton setTitle:@"关闭" forState:UIControlStateNormal];
             _switchButton.backgroundColor = [UIColor hexStringToColor:@"ff6a6a"];
             _detailsLabel.text = @"设备状态:打开";
             _switchButton.selected = YES;

@@ -24,9 +24,11 @@ typedef enum : NSUInteger {
 @property(nonatomic,copy)NSNumber *temperature;//温度
 @property(nonatomic,copy)NSNumber *humidity;//湿度
 @property(nonatomic,copy)NSNumber *switchState;//开关状态
-@property(nonatomic,copy)NSString *clientID;//离线设备ID
+@property(nonatomic,copy)NSString *clientID;//设备ID
+@property(nonatomic,copy)NSString *switchID;//开关ID
 @property(nonatomic,copy)NSString *cliendName;//设备名称
 @property(nonatomic,copy)NSNumber *cliendType;//设备类型
+@property(nonatomic,copy)NSNumber *isOn;//是否已经打开开关
 
 @end
 

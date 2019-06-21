@@ -189,7 +189,7 @@ static MQTTManager *manager = nil;
 
 - (void)sendMQTTDataMessage:(NSData *)dataMessage topic:(NSString *)topic {
     
-    [self.sessionManager sendData:dataMessage topic:topic qos:MQTTQosLevelAtMostOnce retain:NO];
+    [self.sessionManager sendData:dataMessage topic:topic qos:MQTTQosLevelAtLeastOnce retain:NO];
 }
 
 #pragma mark - MQTTClient的代理回调
@@ -210,7 +210,7 @@ static MQTTManager *manager = nil;
                                       };
             
             self.mqttState = MQTTStateDidConnect;
-            [self sendMQTTMapMessage:message topic:MQTTOnlineTopic];
+            [self sendMQTTMapMessage:message topic:MQTTClientTopic];
             break;
         }
         case MQTTSessionManagerStateConnecting:
@@ -251,10 +251,27 @@ static MQTTManager *manager = nil;
             //温湿度数据
             messageModel.messageType = MQTTMessageTypeData;
             break;
-        case 1:
+        case 1:{
             //反馈数据
             messageModel.messageType = MQTTMessageTypeResponse;
+            
+            for (ClientModel *clientModel in self.clientArray) {
+                if ([clientModel.clientID isEqualToString:messageModel.clientID]) {
+                    for (SwitchModel *switchModel in clientModel.switchArray) {
+                        if ([switchModel.switchID isEqualToString:messageModel.switchID]) {
+                            switchModel.switchType = @([messageModel.isOn intValue] + 1);
+                            break;
+                        }
+                    }
+                    break;
+                }
+            }
+            
+            [[NSNotificationCenter defaultCenter] postNotificationName:MQTTOrderResponseStateNotificationName object:@{@"clientID":messageModel.clientID,
+                                                                                                                       @"switchID":messageModel.switchID,
+                                                                                                                       @"isOn":messageModel.isOn}];
             break;
+        }
         case 2:{
             //遗嘱离线数据
             messageModel.messageType = MQTTMessageTypeWill;

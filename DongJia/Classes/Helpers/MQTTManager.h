@@ -27,6 +27,9 @@ typedef enum : NSUInteger {
 //MQTT的可操作指令发送改变的通知
 #define MQTTOrderChangeStateNotificationName @"MQTTOrderChangeStateNotificationName"
 
+//MQTT的f设备返回指令信息的通知 带有@{@"clientID":xxx, @"switchID":xxx}信息
+#define MQTTOrderResponseStateNotificationName @"MQTTOrderResponseStateNotificationName"
+
 @interface MQTTManager : NSObject
 
 //MQTTManager 是MQTT的管理类,默认消息等级全部为QOS 0

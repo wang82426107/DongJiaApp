@@ -35,6 +35,7 @@
     if (self = [super initWithFrame:frame]) {
         self.titeColor = [UIColor hexStringToColor:@"023c8a"];
         self.isShow = NO;
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeSwitchStateAction:) name:MQTTOrderResponseStateNotificationName object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeOrderListAction) name:MQTTOrderChangeStateNotificationName object:nil];
         [self addSubview:self.orderView];
         [self addSubview:self.detailView];
@@ -99,6 +100,27 @@
     }
     self.selectIndex = 0;
     [self.orderListView reloadData];
+}
+
+- (void)changeSwitchStateAction:(NSNotification *)notification {
+    
+    NSDictionary *obj = notification.object;
+    NSString *clientID = obj[@"clientID"];
+    NSString *switchID = obj[@"switchID"];
+    NSNumber *isOn = obj[@"isOn"];
+    
+    for (int i = 0; i < self.dataArray.count; i++) {
+        SwitchModel *switchModel = self.dataArray[i];
+        if ([switchModel.clientID isEqualToString:clientID] &&
+            [switchModel.switchID isEqualToString:switchID]) {
+            switchModel.switchState = @([isOn intValue] + 1);
+
+            if (i == _selectIndex) {
+                self.selectIndex = i;
+            }
+            break;
+        }
+    }
 }
 
 - (void)setSelectIndex:(NSInteger)selectIndex {

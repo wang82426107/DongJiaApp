@@ -36,7 +36,7 @@
 
     //MQTT初始化
     [[MQTTManager defaultManager] addObserver:self forKeyPath:@"mqttState" options:NSKeyValueObservingOptionNew context:nil];
-    [[MQTTManager defaultManager] bindWithUserName:MQTTUserName password:MQTTPassWord topicArray:@[MQTTDataTopic,MQTTSwitchTopic,MQTTOnlineTopic,MQTTWillTopic] isSSL:NO];
+    [[MQTTManager defaultManager] bindWithUserName:MQTTUserName password:MQTTPassWord topicArray:@[MQTTDataTopic,MQTTClientTopic,MQTTWillTopic] isSSL:NO];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveMessageNotificationAction:) name:ReceiveMessageNotificationName object:nil];
 }
 

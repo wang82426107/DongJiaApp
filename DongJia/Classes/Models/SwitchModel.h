@@ -10,8 +10,8 @@
 
 typedef enum : NSUInteger {
     SwitchStateUnknown,
-    SwitchStateOpen,
     SwitchStateClose,
+    SwitchStateOpen,
 } SwitchState;
 
 typedef enum : NSUInteger {
