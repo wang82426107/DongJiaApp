@@ -33,10 +33,21 @@ static MQTTManager *manager = nil;
         if (manager == nil) {
             manager = [[MQTTManager alloc] init];
             manager.mqttState = MQTTStateDisConnect;
+            manager.clientArray = [NSMutableArray arrayWithCapacity:16];
             manager.topicDictionary = [NSMutableDictionary dictionaryWithCapacity:16];
         }
     });
     return manager;
+}
+
+- (NSString*)uuid {
+    
+    CFUUIDRef puuid = CFUUIDCreate( nil );
+    CFStringRef uuidString = CFUUIDCreateString( nil, puuid );
+    NSString * result = (NSString *)CFBridgingRelease(CFStringCreateCopy( NULL, uuidString));
+    CFRelease(puuid);
+    CFRelease(uuidString);
+    return result;
 }
 
 #pragma mark - 懒加载
@@ -62,12 +73,12 @@ static MQTTManager *manager = nil;
 
 #pragma mark - 绑定连接MQTT服务器,主动断开,重连服务器
 
-- (void)bindWithUserName:(NSString *)username password:(NSString *)password cliendId:(NSString *)cliendId topicArray:(NSArray <NSString *>*)topicArray isSSL:(BOOL)isSSL {
+- (void)bindWithUserName:(NSString *)username password:(NSString *)password topicArray:(NSArray <NSString *>*)topicArray isSSL:(BOOL)isSSL {
     
     self.mqttState = MQTTStateStartConnect;
     self.username = username;
     self.password = password;
-    self.cliendId = cliendId;
+    self.cliendId = [self uuid];
     self.isSSL = isSSL;
 
     [self.sessionManager connectTo:AddressOfMQTTServer
@@ -119,7 +130,7 @@ static MQTTManager *manager = nil;
         self.sessionManager.subscriptions = self.topicDictionary;
     }
     else {
-        [self bindWithUserName:self.username password:self.password cliendId:self.cliendId topicArray:self.topicArray isSSL:self.isSSL];
+        [self bindWithUserName:self.username password:self.password topicArray:self.topicArray isSSL:self.isSSL];
     }
 }
 
@@ -187,10 +198,21 @@ static MQTTManager *manager = nil;
 - (void)sessionManager:(MQTTSessionManager *)sessionManager didChangeState:(MQTTSessionManagerState)newState {
     
     switch (newState) {
-        case MQTTSessionManagerStateConnected:
+        case MQTTSessionManagerStateConnected:{
             NSLog(@"eventCode -- 连接成功");
+            NSDictionary *message = @{
+                                      @"type":@(3),
+                                      @"data":@{
+                                              @"cliendType":@(0),
+                                              @"cliendName":@"骚栋的手机",
+                                              @"cliendID":self.cliendId
+                                              },
+                                      };
+            
             self.mqttState = MQTTStateDidConnect;
+            [self sendMQTTMapMessage:message topic:MQTTOnlineTopic];
             break;
+        }
         case MQTTSessionManagerStateConnecting:
             NSLog(@"eventCode -- 连接中");
             self.mqttState = MQTTStateConnecting;
@@ -213,16 +235,77 @@ static MQTTManager *manager = nil;
         default:
             break;
     }
-}
+    [[NSNotificationCenter defaultCenter] postNotificationName:MQTTChangeStateNotificationName object:nil];
 
+}
 
 //接受到消息的回调代理方法
 - (void)handleMessage:(NSData *)data onTopic:(NSString *)topic retained:(BOOL)retained {
     
     NSDictionary *message = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
-    NSLog(@"接受消息:%@",message);
+    int type = [message[@"type"] intValue];
+    MQTTMessageModel *messageModel = [[MQTTMessageModel alloc] init];
+    [messageModel setValuesForKeysWithDictionary:message[@"data"]];
+    switch (type) {
+        case 0:
+            //温湿度数据
+            messageModel.messageType = MQTTMessageTypeData;
+            break;
+        case 1:
+            //反馈数据
+            messageModel.messageType = MQTTMessageTypeResponse;
+            break;
+        case 2:{
+            //遗嘱离线数据
+            messageModel.messageType = MQTTMessageTypeWill;
+            
+            //移除所有相关的指令信息
+            for (NSInteger i = self.clientArray.count - 1; i >= 0; i--) {
+                ClientModel *clientModel = self.clientArray[i];
+                if ([clientModel.clientID isEqualToString:messageModel.clientID]) {
+                    [self.clientArray removeObject:clientModel];
+                }
+            }
+            [[NSNotificationCenter defaultCenter] postNotificationName:MQTTOrderChangeStateNotificationName object:messageModel];
+            break;
+        }
+        case 3:{
+            //设备信息
+            messageModel.messageType = MQTTMessageTypeClient;
+            
+            ClientModel *clientModel = [[ClientModel alloc] init];
+            [clientModel setValuesForKeysWithDictionary:message[@"data"]];
+            NSArray *switchs = message[@"data"][@"switchs"];
+            for (NSDictionary * switchDic in switchs) {
+                SwitchModel *switchModel = [[SwitchModel alloc] init];
+                switchModel.clientID = clientModel.clientID;
+                [switchModel setValuesForKeysWithDictionary:switchDic];
+                [clientModel.switchArray addObject:switchModel];
+            }
+
+            if (clientModel.clientEunmType == ClientTypeESP8266) {
+                BOOL isHaveClient = NO;
+                //查看数组中是否有该设备的信息
+                for (ClientModel *nowClientModel in self.clientArray) {
+                    if ([clientModel.clientID isEqualToString:nowClientModel.clientID]) {
+                        isHaveClient = YES;
+                        break;
+                    }
+                }
+                if (!isHaveClient) {
+                    [self.clientArray addObject:clientModel];
+                    [[NSNotificationCenter defaultCenter] postNotificationName:MQTTOrderChangeStateNotificationName object:messageModel];
+                }
+            }
+            
+            break;
+        }
+    }
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:ReceiveMessageNotificationName object:messageModel];
 }
 
 
 
 @end
+

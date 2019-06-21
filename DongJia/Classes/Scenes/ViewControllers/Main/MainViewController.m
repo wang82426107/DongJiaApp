@@ -7,17 +7,20 @@
 //
 
 #import "MainViewController.h"
+#import "OrderMenuAlertView.h"
 #import "UIView+Extension.h"
-#import "TYCircleMenu.h"
+#import "MainClientCell.h"
+#import "UIView+Toast.h"
 #import "MQTTManager.h"
 
-@interface MainViewController ()<TYCircleMenuDelegate>
+@interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic,strong)UIImageView *mqttStateView;
 @property(nonatomic,strong)UILabel *mqttStateLabel;
 @property(nonatomic,strong)UIButton *userButton;
-@property(nonatomic,strong)TYCircleMenu *orderMenu;
-@property(nonatomic,strong)UITableView *mainTableView;
+@property(nonatomic,strong)UIButton *orderButton;
+@property(nonatomic,strong)OrderMenuAlertView *orderMenu;
+@property(nonatomic,strong)UITableView *clientTableView;
 
 @end
 
@@ -28,12 +31,13 @@
     [self.view addSubview:self.userButton];
     [self.view addSubview:self.mqttStateView];
     [self.view addSubview:self.mqttStateLabel];
-    [self.view addSubview:self.orderMenu];
+    [self.view addSubview:self.orderButton];
+    [self.view addSubview:self.clientTableView];
 
-    
     //MQTT初始化
     [[MQTTManager defaultManager] addObserver:self forKeyPath:@"mqttState" options:NSKeyValueObservingOptionNew context:nil];
-    [[MQTTManager defaultManager] bindWithUserName:MQTTUserName password:MQTTPassWord cliendId:@"3333333" topicArray:@[@"Will",@"SD_LED"] isSSL:NO];
+    [[MQTTManager defaultManager] bindWithUserName:MQTTUserName password:MQTTPassWord topicArray:@[MQTTDataTopic,MQTTSwitchTopic,MQTTOnlineTopic,MQTTWillTopic] isSSL:NO];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveMessageNotificationAction:) name:ReceiveMessageNotificationName object:nil];
 }
 
 #pragma mark - 懒加载
@@ -70,30 +74,97 @@
     return _mqttStateLabel;
 }
 
-- (TYCircleMenu *)orderMenu {
+- (UIButton *)orderButton {
+    
+    if (_orderButton == nil) {
+        _orderButton = [[UIButton alloc] initWithFrame:CGRectMake(KmainWidth - KNormalEdgeDistance - _userButton.width, _userButton.top, _userButton.width, _userButton.height)];
+        _orderButton.backgroundColor = [UIColor lightGrayColor];
+        _orderButton.layer.cornerRadius = _orderButton.width/2.0;
+        _orderButton.layer.masksToBounds = YES;
+        [_orderButton setImage:[UIImage imageNamed:@"order_button_icon"] forState:UIControlStateNormal];
+        [_orderButton addTarget:self action:@selector(showOrderMenuAction) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _orderButton;
+}
+
+- (OrderMenuAlertView *)orderMenu {
     
     if (_orderMenu == nil) {
-        NSArray *titleItems = @[@"客厅空调",@"客厅灯",@"卧室空调",@"卧室灯",
-                                @"抽风机",@"冰箱",@"客厅空调",@"主卧窗户",
-                                @"次卧窗户",@"书房台灯",@"洗衣机",@"电视机"];
-        NSArray *imageItems = @[@"test_0",@"test_1",@"test_2",@"test_3",
-                                @"test_4",@"test_5",@"test_6",@"test_7",
-                                @"test_8",@"test_9",@"test_10",@"test_11"];
-        _orderMenu = [[TYCircleMenu alloc]initWithRadious:300 itemOffset:0 imageArray:imageItems titleArray:titleItems cycle:YES menuDelegate:self];
+        _orderMenu = [[OrderMenuAlertView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        _orderMenu.titeColor =  [UIColor hexStringToColor:@"023c8a"];
     }
     return _orderMenu;
 }
 
-#pragma mark - 选择发送菜单的下标
+- (UITableView *)clientTableView {
+    
+    if (_clientTableView == nil) {
+        _clientTableView = [[UITableView alloc] initWithFrame:CGRectMake(KmainWidth/4.0, KmainHeight - 200.0f, KmainWidth/2.0, 200.0f) style:UITableViewStylePlain];
+        _clientTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _clientTableView.showsVerticalScrollIndicator = NO;
+        _clientTableView.backgroundColor = [UIColor lightGrayColor];
+        _clientTableView.dataSource = self;
+        _clientTableView.delegate = self;
+        _clientTableView.bounces = NO;
+        [_clientTableView registerClass:[MainClientCell class] forCellReuseIdentifier:@"MainClientCell"];
+    }
+    return _clientTableView;
+}
 
-- (void)selectMenuAtIndex:(NSInteger)index {
+#pragma mark - UITableViewDelegate,UITableViewDataSource
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return [MQTTManager defaultManager].clientArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    MainClientCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MainClientCell" forIndexPath:indexPath];
+    cell.dataModel = [MQTTManager defaultManager].clientArray[indexPath.row];
+
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return 40.0f;
+}
+
+#pragma mark - 显示指令菜单
+
+- (void)showOrderMenuAction {
+    
+    if ([MQTTManager defaultManager].clientArray.count == 0) {
+        
+        [self.view makeToast:@"当前还没任何设备在线" duration:0.8 position:CSToastPositionCenter];
+        return;
+    }
+    
+    [self.view.window addSubview:self.orderMenu];
+    [self.orderMenu showWithOrderMenuFrame:CGRectMake(_orderButton.x, _orderButton.bottom + KNormalViewDistance, _orderButton.width, 0) showStyle:MenuShowStyleTopToBottom];
+}
+
+#pragma mark - 接受到消息
+
+- (void)receiveMessageNotificationAction:(NSNotification *)notification {
+    
+    MQTTMessageModel *messageModel = notification.object;
+    switch (messageModel.messageType) {
+        case MQTTMessageTypeClient:case MQTTMessageTypeWill:{
+            [self.clientTableView reloadData];
+            break;
+        }
+        default:
+            break;
+    }
     
 }
 
 #pragma mark - 根据不同状态修改UI
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    
     
     if ([keyPath isEqualToString:@"mqttState"]) {
         

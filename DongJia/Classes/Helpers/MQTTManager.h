@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "MQTTMessageModel.h"
+#import "ClientModel.h"
+#import "SwitchModel.h"
 
 typedef enum : NSUInteger {
     MQTTStateStartConnect,
@@ -16,6 +18,14 @@ typedef enum : NSUInteger {
     MQTTStateDisConnect,
 } MQTTState;
 
+//收到消息的通知,object携带类型为MQTTMessageModel
+#define ReceiveMessageNotificationName @"ReceiveMessageNotificationName"
+
+//MQTT状态发生改变的通知,不携带object.也可以使用KVO监听单例中mqttState的变化
+#define MQTTChangeStateNotificationName @"MQTTChangeStateNotificationName"
+
+//MQTT的可操作指令发送改变的通知
+#define MQTTOrderChangeStateNotificationName @"MQTTOrderChangeStateNotificationName"
 
 @interface MQTTManager : NSObject
 
@@ -29,11 +39,10 @@ typedef enum : NSUInteger {
 
  @param username 账号
  @param password 密码
- @param cliendId 设备ID
  @param topicArray 主题名称数组
  @param isSSL 是否是SSL连接
  */
-- (void)bindWithUserName:(NSString *)username password:(NSString *)password cliendId:(NSString *)cliendId topicArray:(NSArray <NSString *>*)topicArray isSSL:(BOOL)isSSL;
+- (void)bindWithUserName:(NSString *)username password:(NSString *)password topicArray:(NSArray <NSString *>*)topicArray isSSL:(BOOL)isSSL;
 
 
 /**
@@ -92,6 +101,12 @@ typedef enum : NSUInteger {
  主题数组
  */
 @property(nonatomic,copy)NSArray <NSString *>*topicArray;
+
+/**
+ 所有在线设备.
+ */
+@property(nonatomic,strong)NSMutableArray <ClientModel *>*clientArray;
+
 
 @end
 

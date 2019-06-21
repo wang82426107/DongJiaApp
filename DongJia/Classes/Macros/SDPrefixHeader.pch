@@ -22,7 +22,27 @@
 
 #define MQTTUserName @"8iyfwyc/wwd"
 
-#define MQTTPassWord @"e628XWFkrZIEuad6"
+#define MQTTPassWord @"cFUYyUOg79IYgJFa"
+
+#define ThingPassWord @"5diTwg66Zi9wbhji"
+
+//数据消息,只可订阅
+#define MQTTDataTopic @"Data"
+
+//指令主题 只可发送
+#define MQTTOrderTopic @"Order"
+
+//开关配置信息,只可订阅
+#define MQTTSwitchTopic @"Switch"
+
+//在线消息,发送与订阅
+#define MQTTOnlineTopic @"Online"
+
+//遗嘱消息,发送与订阅
+#define MQTTWillTopic @"Will"
+
+
+
 
 //***********************接口网络***************************//
 
