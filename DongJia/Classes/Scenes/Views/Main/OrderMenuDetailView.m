@@ -117,26 +117,18 @@
     self.nameLabel.text = dataModel.name;
     
     switch (dataModel.state) {
-
-        case SwitchStateUnknown:
-            [_switchButton setTitle:@"未知" forState:UIControlStateNormal];
-            _switchButton.backgroundColor = [UIColor hexStringToColor:@"c0c0c0"];
-            _detailsLabel.text = @"设备状态:未知";
-            [_switchButton setEnabled:NO];
-            break;
-        case SwitchStateOpen:
+            
+        case SwitchStateClose:
             [_switchButton setTitle:@"打开" forState:UIControlStateNormal];
-            _switchButton.backgroundColor = [UIColor hexStringToColor:@"8deeee"];
+            _switchButton.backgroundColor = [UIColor hexStringToColor:@"ff6a6a"];
             _detailsLabel.text = @"设备状态:关闭";
             _switchButton.selected = NO;
-            [_switchButton setEnabled:YES];
             break;
-        case SwitchStateClose:
+        case SwitchStateOpen:
             [_switchButton setTitle:@"关闭" forState:UIControlStateNormal];
-            _switchButton.backgroundColor = [UIColor hexStringToColor:@"ff6a6a"];
+            _switchButton.backgroundColor = [UIColor hexStringToColor:@"8deeee"];
             _detailsLabel.text = @"设备状态:打开";
             _switchButton.selected = YES;
-            [_switchButton setEnabled:YES];
             break;
     }
 }

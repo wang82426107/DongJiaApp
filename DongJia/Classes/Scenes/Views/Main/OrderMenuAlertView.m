@@ -114,7 +114,6 @@
         if ([switchModel.clientID isEqualToString:clientID] &&
             [switchModel.switchID isEqualToString:switchID]) {
             switchModel.switchState = @([isOn intValue] + 1);
-
             if (i == _selectIndex) {
                 self.selectIndex = i;
             }
