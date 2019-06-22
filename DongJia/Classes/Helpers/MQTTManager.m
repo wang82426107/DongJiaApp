@@ -203,9 +203,9 @@ static MQTTManager *manager = nil;
             NSDictionary *message = @{
                                       @"type":@(3),
                                       @"data":@{
-                                              @"cliendType":@(0),
-                                              @"cliendName":@"骚栋的手机",
-                                              @"cliendID":self.cliendId
+                                              @"clientType":@(0),
+                                              @"clientName":@"骚栋的手机",
+                                              @"clientID":self.cliendId
                                               },
                                       };
             

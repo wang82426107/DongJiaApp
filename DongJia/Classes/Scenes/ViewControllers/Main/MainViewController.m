@@ -249,8 +249,12 @@
             break;
         }
         case MQTTMessageTypeData:{
-            self.headerView.temperature = messageModel.temperature;
-            self.headerView.humidity = messageModel.humidity;
+            if (messageModel.temperature != nil) {
+                self.headerView.temperature = messageModel.temperature;
+            }
+            if (messageModel.humidity != nil) {
+                self.headerView.humidity = messageModel.humidity;
+            }
             break;
         }
         default:
