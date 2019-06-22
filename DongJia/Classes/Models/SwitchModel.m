@@ -32,22 +32,22 @@
     
     switch (type) {
         case SwitchTypeSocket:
-            _imageName = @"menu_socket_icon";
+            _imageName = @"switch_socket_icon";
             break;
         case SwitchTypeLight:
-            _imageName = @"menu_light_icon";
+            _imageName = @"switch_light_icon";
             break;
         case SwitchTypeDeskLamp:
-            _imageName = @"menu_desk_lamp_icon";
+            _imageName = @"switch_desk_lamp_icon";
             break;
         case SwitchTypeAir:
-            _imageName = @"menu_air_icon";
+            _imageName = @"switch_air_icon";
             break;
         case SwitchTypeTV:
-            _imageName = @"menu_tv_icon";
+            _imageName = @"switch_tv_icon";
             break;
         case SwitchTypeWidnow:
-            _imageName = @"menu_window_icon";
+            _imageName = @"switch_window_icon";
             break;
     }
 }

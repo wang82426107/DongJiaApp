@@ -9,10 +9,7 @@
 /* Begin PBXBuildFile section */
 		8B25DD349385800CEEDE1864 /* libPods-DongJia.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 142A6ABF5534F00655DEE71E /* libPods-DongJia.a */; };
 		E169BF1922BC6CB2000990BD /* MQTTMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E169BF1822BC6CB2000990BD /* MQTTMessageModel.m */; };
-		E169BF1F22BC7767000990BD /* OrderMenuAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = E169BF1E22BC7767000990BD /* OrderMenuAlertView.m */; };
-		E169BF2222BC7E5C000990BD /* OrderMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E169BF2122BC7E5C000990BD /* OrderMenuCell.m */; };
 		E169BF2522BC9284000990BD /* SwitchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E169BF2422BC9284000990BD /* SwitchModel.m */; };
-		E169BF2822BCB641000990BD /* OrderMenuDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = E169BF2722BCB641000990BD /* OrderMenuDetailView.m */; };
 		E169BF2B22BCC43D000990BD /* ClientModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E169BF2A22BCC43D000990BD /* ClientModel.m */; };
 		E169BF2E22BCC7E0000990BD /* MainClientCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E169BF2D22BCC7E0000990BD /* MainClientCell.m */; };
 		E169BF3122BCD1AF000990BD /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = E169BF3022BCD1AF000990BD /* UIView+Toast.m */; };
@@ -69,6 +66,12 @@
 		E16C7CE722BB63DF00DC13CC /* ZFWaveChart.m in Sources */ = {isa = PBXBuildFile; fileRef = E16C7CC622BB63DF00DC13CC /* ZFWaveChart.m */; };
 		E16C7CEA22BB68A200DC13CC /* MQTTManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E16C7CE922BB68A200DC13CC /* MQTTManager.m */; };
 		E16C7CED22BB848E00DC13CC /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E16C7CEC22BB848E00DC13CC /* UIView+Extension.m */; };
+		E552899922BE3CC8004EC3C3 /* MainHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E552899822BE3CC8004EC3C3 /* MainHeaderView.m */; };
+		E552899B22BE3DBE004EC3C3 /* 站酷高端黑.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E552899A22BE3DBD004EC3C3 /* 站酷高端黑.ttf */; };
+		E552899D22BE3E8B004EC3C3 /* Agency_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E552899C22BE3E8B004EC3C3 /* Agency_Bold.ttf */; };
+		E55289A122BE52BA004EC3C3 /* DefaultViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E552899F22BE52BA004EC3C3 /* DefaultViewCell.m */; };
+		E55289A522BE58A6004EC3C3 /* ClientAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = E55289A422BE58A6004EC3C3 /* ClientAlertView.m */; };
+		E55289A822BE5F93004EC3C3 /* ClientAlertViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E55289A722BE5F93004EC3C3 /* ClientAlertViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,14 +80,8 @@
 		142A6ABF5534F00655DEE71E /* libPods-DongJia.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DongJia.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E169BF1722BC6CB2000990BD /* MQTTMessageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MQTTMessageModel.h; sourceTree = "<group>"; };
 		E169BF1822BC6CB2000990BD /* MQTTMessageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MQTTMessageModel.m; sourceTree = "<group>"; };
-		E169BF1D22BC7767000990BD /* OrderMenuAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderMenuAlertView.h; sourceTree = "<group>"; };
-		E169BF1E22BC7767000990BD /* OrderMenuAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderMenuAlertView.m; sourceTree = "<group>"; };
-		E169BF2022BC7E5C000990BD /* OrderMenuCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderMenuCell.h; sourceTree = "<group>"; };
-		E169BF2122BC7E5C000990BD /* OrderMenuCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderMenuCell.m; sourceTree = "<group>"; };
 		E169BF2322BC9284000990BD /* SwitchModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwitchModel.h; sourceTree = "<group>"; };
 		E169BF2422BC9284000990BD /* SwitchModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwitchModel.m; sourceTree = "<group>"; };
-		E169BF2622BCB641000990BD /* OrderMenuDetailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderMenuDetailView.h; sourceTree = "<group>"; };
-		E169BF2722BCB641000990BD /* OrderMenuDetailView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderMenuDetailView.m; sourceTree = "<group>"; };
 		E169BF2922BCC43D000990BD /* ClientModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClientModel.h; sourceTree = "<group>"; };
 		E169BF2A22BCC43D000990BD /* ClientModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClientModel.m; sourceTree = "<group>"; };
 		E169BF2C22BCC7E0000990BD /* MainClientCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainClientCell.h; sourceTree = "<group>"; };
@@ -199,6 +196,16 @@
 		E16C7CE922BB68A200DC13CC /* MQTTManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MQTTManager.m; sourceTree = "<group>"; };
 		E16C7CEB22BB848E00DC13CC /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		E16C7CEC22BB848E00DC13CC /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		E552899722BE3CC8004EC3C3 /* MainHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainHeaderView.h; sourceTree = "<group>"; };
+		E552899822BE3CC8004EC3C3 /* MainHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainHeaderView.m; sourceTree = "<group>"; };
+		E552899A22BE3DBD004EC3C3 /* 站酷高端黑.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "站酷高端黑.ttf"; sourceTree = "<group>"; };
+		E552899C22BE3E8B004EC3C3 /* Agency_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Agency_Bold.ttf; sourceTree = "<group>"; };
+		E552899F22BE52BA004EC3C3 /* DefaultViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultViewCell.m; sourceTree = "<group>"; };
+		E55289A022BE52BA004EC3C3 /* DefaultViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultViewCell.h; sourceTree = "<group>"; };
+		E55289A322BE58A6004EC3C3 /* ClientAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClientAlertView.h; sourceTree = "<group>"; };
+		E55289A422BE58A6004EC3C3 /* ClientAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClientAlertView.m; sourceTree = "<group>"; };
+		E55289A622BE5F93004EC3C3 /* ClientAlertViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClientAlertViewCell.h; sourceTree = "<group>"; };
+		E55289A722BE5F93004EC3C3 /* ClientAlertViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClientAlertViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,14 +240,14 @@
 		E169BF1622BC6C7E000990BD /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				E169BF1D22BC7767000990BD /* OrderMenuAlertView.h */,
-				E169BF1E22BC7767000990BD /* OrderMenuAlertView.m */,
-				E169BF2622BCB641000990BD /* OrderMenuDetailView.h */,
-				E169BF2722BCB641000990BD /* OrderMenuDetailView.m */,
-				E169BF2022BC7E5C000990BD /* OrderMenuCell.h */,
-				E169BF2122BC7E5C000990BD /* OrderMenuCell.m */,
 				E169BF2C22BCC7E0000990BD /* MainClientCell.h */,
 				E169BF2D22BCC7E0000990BD /* MainClientCell.m */,
+				E552899722BE3CC8004EC3C3 /* MainHeaderView.h */,
+				E552899822BE3CC8004EC3C3 /* MainHeaderView.m */,
+				E55289A322BE58A6004EC3C3 /* ClientAlertView.h */,
+				E55289A422BE58A6004EC3C3 /* ClientAlertView.m */,
+				E55289A622BE5F93004EC3C3 /* ClientAlertViewCell.h */,
+				E55289A722BE5F93004EC3C3 /* ClientAlertViewCell.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -389,6 +396,8 @@
 		E16C7C2F22BB5C5700DC13CC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E552899C22BE3E8B004EC3C3 /* Agency_Bold.ttf */,
+				E552899A22BE3DBD004EC3C3 /* 站酷高端黑.ttf */,
 				E16C7C1922BB56B100DC13CC /* Assets.xcassets */,
 				E16C7C1B22BB56B100DC13CC /* LaunchScreen.storyboard */,
 			);
@@ -409,7 +418,6 @@
 			children = (
 				E16C7C5B22BB61A800DC13CC /* Base */,
 				E16C7C5922BB615C00DC13CC /* Main */,
-				E16C7C5A22BB616400DC13CC /* Element */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -417,6 +425,7 @@
 		E16C7C3222BB5C5700DC13CC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E552899E22BE52A8004EC3C3 /* Common */,
 				E169BF1622BC6C7E000990BD /* Main */,
 			);
 			path = Views;
@@ -437,13 +446,6 @@
 				E16C7C6022BB61EE00DC13CC /* MainViewController.m */,
 			);
 			path = Main;
-			sourceTree = "<group>";
-		};
-		E16C7C5A22BB616400DC13CC /* Element */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Element;
 			sourceTree = "<group>";
 		};
 		E16C7C5B22BB61A800DC13CC /* Base */ = {
@@ -642,6 +644,15 @@
 			path = ZFWaveChart;
 			sourceTree = "<group>";
 		};
+		E552899E22BE52A8004EC3C3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E55289A022BE52BA004EC3C3 /* DefaultViewCell.h */,
+				E552899F22BE52BA004EC3C3 /* DefaultViewCell.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -700,7 +711,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E552899B22BE3DBE004EC3C3 /* 站酷高端黑.ttf in Resources */,
 				E16C7C1D22BB56B100DC13CC /* LaunchScreen.storyboard in Resources */,
+				E552899D22BE3E8B004EC3C3 /* Agency_Bold.ttf in Resources */,
 				E16C7C1A22BB56B100DC13CC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -758,7 +771,7 @@
 				E16C7CD122BB63DF00DC13CC /* ZFGradientAttribute.m in Sources */,
 				E169BF2E22BCC7E0000990BD /* MainClientCell.m in Sources */,
 				E16C7CDE22BB63DF00DC13CC /* ZFLine.m in Sources */,
-				E169BF2822BCB641000990BD /* OrderMenuDetailView.m in Sources */,
+				E55289A122BE52BA004EC3C3 /* DefaultViewCell.m in Sources */,
 				E16C7C5222BB5E3800DC13CC /* NSArray+JSON.m in Sources */,
 				E16C7C5322BB5E3800DC13CC /* UILabel+VerticalText.m in Sources */,
 				E16C7CC722BB63DF00DC13CC /* NSNumber+Zirkfied.m in Sources */,
@@ -766,13 +779,15 @@
 				E16C7C4D22BB5E3800DC13CC /* UIViewController+VFInsert.m in Sources */,
 				E16C7CCC22BB63DF00DC13CC /* ZFLabel.m in Sources */,
 				E16C7CEA22BB68A200DC13CC /* MQTTManager.m in Sources */,
+				E55289A822BE5F93004EC3C3 /* ClientAlertViewCell.m in Sources */,
 				E16C7CE622BB63DF00DC13CC /* ZFWave.m in Sources */,
 				E16C7C6122BB61EE00DC13CC /* MainViewController.m in Sources */,
 				E16C7C4E22BB5E3800DC13CC /* UIView+LBExtension.m in Sources */,
-				E169BF1F22BC7767000990BD /* OrderMenuAlertView.m in Sources */,
+				E552899922BE3CC8004EC3C3 /* MainHeaderView.m in Sources */,
 				E16C7C5122BB5E3800DC13CC /* UIColor+HexStringColor.m in Sources */,
 				E16C7CED22BB848E00DC13CC /* UIView+Extension.m in Sources */,
 				E169BF3122BCD1AF000990BD /* UIView+Toast.m in Sources */,
+				E55289A522BE58A6004EC3C3 /* ClientAlertView.m in Sources */,
 				E16C7C5E22BB61C100DC13CC /* BaseViewController.m in Sources */,
 				E169BF1922BC6CB2000990BD /* MQTTMessageModel.m in Sources */,
 				E16C7CD222BB63DF00DC13CC /* ZFConst.m in Sources */,
@@ -791,7 +806,6 @@
 				E16C7CCD22BB63DF00DC13CC /* ZFPopoverLabel.m in Sources */,
 				E16C7C5022BB5E3800DC13CC /* UIImage+Gif.m in Sources */,
 				E16C7C5822BB5E3800DC13CC /* UIViewController+CustomNavigationBar.m in Sources */,
-				E169BF2222BC7E5C000990BD /* OrderMenuCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

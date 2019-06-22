@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "我的-白色板@1x.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "灯.png",
+      "filename" : "我的-白色板@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "我的-白色板@3x.png",
       "scale" : "3x"
     }
   ],

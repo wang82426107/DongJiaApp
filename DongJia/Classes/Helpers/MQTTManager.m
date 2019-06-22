@@ -259,7 +259,7 @@ static MQTTManager *manager = nil;
                 if ([clientModel.clientID isEqualToString:messageModel.clientID]) {
                     for (SwitchModel *switchModel in clientModel.switchArray) {
                         if ([switchModel.switchID isEqualToString:messageModel.switchID]) {
-                            switchModel.switchType = @([messageModel.isOn intValue] + 1);
+                            switchModel.switchState = messageModel.isOn;
                             break;
                         }
                     }

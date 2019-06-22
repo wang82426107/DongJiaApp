@@ -38,9 +38,6 @@
 //遗嘱消息,发送与订阅
 #define MQTTWillTopic @"Will"
 
-
-
-
 //***********************接口网络***************************//
 
 //通用接口(正式)旧
@@ -100,11 +97,11 @@
 //主色
 #define KMainColor ([UIColor hexStringToColor:@"1296db"])
 
-//按钮高亮颜色
-#define KButtonHightColor ([UIColor hexStringToColor:@"5697e3"])
+//副色
+#define KSubColor ([UIColor hexStringToColor:@"3bde6c"])
 
 //标题颜色
-#define KTitleTextColor ([UIColor hexStringToColor:@"2f2f2f"])
+#define KTitleTextColor ([UIColor hexStringToColor:@"333333"])
 
 //正文颜色
 #define KContentTextColor ([UIColor hexStringToColor:@"333333"])
@@ -113,7 +110,7 @@
 #define KDetailTextColor ([UIColor hexStringToColor:@"858585"])
 
 //背景灰色
-#define KGreyBackgroundColor ([UIColor hexStringToColor:@"f6f7f9"])
+#define KGreyBackgroundColor ([UIColor hexStringToColor:@"f5f5f5"])
 
 
 //***********************字体大小***************************//
