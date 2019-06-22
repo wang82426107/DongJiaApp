@@ -114,8 +114,8 @@
     
     if (_headerView == nil) {
         _headerView = [[MainHeaderView alloc] initWithFrame:CGRectMake(0, StatusHeight + NavigationBarHeight + KNormalEdgeDistance, KmainWidth, KNormalEdgeDistance + 40.0f + KNormalEdgeDistance + 100.0f + KNormalEdgeDistance)];
-        _headerView.temperature = @(30);
-        _headerView.humidity = @(85);
+        _headerView.temperature = @(0);
+        _headerView.humidity = @(0);
     }
     return _headerView;
 }
@@ -246,6 +246,11 @@
     switch (messageModel.messageType) {
         case MQTTMessageTypeClient:case MQTTMessageTypeWill:{
             [self.clientTableView reloadData];
+            break;
+        }
+        case MQTTMessageTypeData:{
+            self.headerView.temperature = messageModel.temperature;
+            self.headerView.humidity = messageModel.humidity;
             break;
         }
         default:

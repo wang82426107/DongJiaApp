@@ -67,7 +67,6 @@
 		E16C7CEA22BB68A200DC13CC /* MQTTManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E16C7CE922BB68A200DC13CC /* MQTTManager.m */; };
 		E16C7CED22BB848E00DC13CC /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E16C7CEC22BB848E00DC13CC /* UIView+Extension.m */; };
 		E552899922BE3CC8004EC3C3 /* MainHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E552899822BE3CC8004EC3C3 /* MainHeaderView.m */; };
-		E552899B22BE3DBE004EC3C3 /* 站酷高端黑.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E552899A22BE3DBD004EC3C3 /* 站酷高端黑.ttf */; };
 		E552899D22BE3E8B004EC3C3 /* Agency_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E552899C22BE3E8B004EC3C3 /* Agency_Bold.ttf */; };
 		E55289A122BE52BA004EC3C3 /* DefaultViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E552899F22BE52BA004EC3C3 /* DefaultViewCell.m */; };
 		E55289A522BE58A6004EC3C3 /* ClientAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = E55289A422BE58A6004EC3C3 /* ClientAlertView.m */; };
@@ -198,7 +197,6 @@
 		E16C7CEC22BB848E00DC13CC /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		E552899722BE3CC8004EC3C3 /* MainHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainHeaderView.h; sourceTree = "<group>"; };
 		E552899822BE3CC8004EC3C3 /* MainHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainHeaderView.m; sourceTree = "<group>"; };
-		E552899A22BE3DBD004EC3C3 /* 站酷高端黑.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "站酷高端黑.ttf"; sourceTree = "<group>"; };
 		E552899C22BE3E8B004EC3C3 /* Agency_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Agency_Bold.ttf; sourceTree = "<group>"; };
 		E552899F22BE52BA004EC3C3 /* DefaultViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultViewCell.m; sourceTree = "<group>"; };
 		E55289A022BE52BA004EC3C3 /* DefaultViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultViewCell.h; sourceTree = "<group>"; };
@@ -397,7 +395,6 @@
 			isa = PBXGroup;
 			children = (
 				E552899C22BE3E8B004EC3C3 /* Agency_Bold.ttf */,
-				E552899A22BE3DBD004EC3C3 /* 站酷高端黑.ttf */,
 				E16C7C1922BB56B100DC13CC /* Assets.xcassets */,
 				E16C7C1B22BB56B100DC13CC /* LaunchScreen.storyboard */,
 			);
@@ -711,7 +708,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E552899B22BE3DBE004EC3C3 /* 站酷高端黑.ttf in Resources */,
 				E16C7C1D22BB56B100DC13CC /* LaunchScreen.storyboard in Resources */,
 				E552899D22BE3E8B004EC3C3 /* Agency_Bold.ttf in Resources */,
 				E16C7C1A22BB56B100DC13CC /* Assets.xcassets in Resources */,
