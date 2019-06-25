@@ -87,7 +87,7 @@
 - (UIButton *)userButton {
     
     if (_userButton == nil) {
-        _userButton = [[UIButton alloc] initWithFrame:CGRectMake(KNormalEdgeDistance, StatusHeight, NavigationBarHeight, NavigationBarHeight)];
+        _userButton = [[UIButton alloc] initWithFrame:CGRectMake(KNormalEdgeDistance, StatusHeight + 7, 30, 30)];
         _userButton.userInteractionEnabled = NO;
         [_userButton setBackgroundImage:[UIImage imageNamed:@"main_user_no_select_icon"] forState:UIControlStateNormal];
         [_userButton setBackgroundImage:[UIImage imageNamed:@"main_user_select_icon"] forState:UIControlStateSelected];

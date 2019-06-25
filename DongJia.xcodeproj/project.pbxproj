@@ -72,6 +72,20 @@
 		E55289A122BE52BA004EC3C3 /* DefaultViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E552899F22BE52BA004EC3C3 /* DefaultViewCell.m */; };
 		E55289A522BE58A6004EC3C3 /* ClientAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = E55289A422BE58A6004EC3C3 /* ClientAlertView.m */; };
 		E55289A822BE5F93004EC3C3 /* ClientAlertViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E55289A722BE5F93004EC3C3 /* ClientAlertViewCell.m */; };
+		E55F54EF22C29634007896B4 /* ESPTouchTaskParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = E55F54EB22C29634007896B4 /* ESPTouchTaskParameter.m */; };
+		E55F54F022C29634007896B4 /* ESPTouchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E55F54ED22C29634007896B4 /* ESPTouchResult.m */; };
+		E55F54F122C29634007896B4 /* ESPTouchTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E55F54EE22C29634007896B4 /* ESPTouchTask.m */; };
+		E55F54FE22C2965E007896B4 /* ESP_WifiUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = E55F54F622C2965E007896B4 /* ESP_WifiUtil.m */; };
+		E55F54FF22C2965E007896B4 /* ESPAES.m in Sources */ = {isa = PBXBuildFile; fileRef = E55F54F722C2965E007896B4 /* ESPAES.m */; };
+		E55F550022C2965E007896B4 /* ESP_ByteUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = E55F54F822C2965E007896B4 /* ESP_ByteUtil.m */; };
+		E55F550122C2965E007896B4 /* ESP_CRC8.m in Sources */ = {isa = PBXBuildFile; fileRef = E55F54F922C2965E007896B4 /* ESP_CRC8.m */; };
+		E55F550222C2965E007896B4 /* ESP_NetUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = E55F54FA22C2965E007896B4 /* ESP_NetUtil.m */; };
+		E55F554D22C2968C007896B4 /* ESPDatumCode.m in Sources */ = {isa = PBXBuildFile; fileRef = E55F554522C2968B007896B4 /* ESPDatumCode.m */; };
+		E55F554E22C2968C007896B4 /* ESPTouchGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = E55F554622C2968C007896B4 /* ESPTouchGenerator.m */; };
+		E55F554F22C2968C007896B4 /* ESPDataCode.m in Sources */ = {isa = PBXBuildFile; fileRef = E55F554822C2968C007896B4 /* ESPDataCode.m */; };
+		E55F555022C2968C007896B4 /* ESPGuideCode.m in Sources */ = {isa = PBXBuildFile; fileRef = E55F554C22C2968C007896B4 /* ESPGuideCode.m */; };
+		E55F555622C296A9007896B4 /* ESPUDPSocketServer.m in Sources */ = {isa = PBXBuildFile; fileRef = E55F555322C296A9007896B4 /* ESPUDPSocketServer.m */; };
+		E55F555722C296A9007896B4 /* ESPUDPSocketClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E55F555522C296A9007896B4 /* ESPUDPSocketClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -207,6 +221,36 @@
 		E55289A422BE58A6004EC3C3 /* ClientAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClientAlertView.m; sourceTree = "<group>"; };
 		E55289A622BE5F93004EC3C3 /* ClientAlertViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClientAlertViewCell.h; sourceTree = "<group>"; };
 		E55289A722BE5F93004EC3C3 /* ClientAlertViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClientAlertViewCell.m; sourceTree = "<group>"; };
+		E55F54E822C2962B007896B4 /* ESPTouchDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPTouchDelegate.h; sourceTree = "<group>"; };
+		E55F54E922C2962B007896B4 /* ESPTouchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPTouchResult.h; sourceTree = "<group>"; };
+		E55F54EA22C2962B007896B4 /* ESPTouchTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPTouchTask.h; sourceTree = "<group>"; };
+		E55F54EB22C29634007896B4 /* ESPTouchTaskParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPTouchTaskParameter.m; sourceTree = "<group>"; };
+		E55F54EC22C29634007896B4 /* ESPTouchTaskParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPTouchTaskParameter.h; sourceTree = "<group>"; };
+		E55F54ED22C29634007896B4 /* ESPTouchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPTouchResult.m; sourceTree = "<group>"; };
+		E55F54EE22C29634007896B4 /* ESPTouchTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPTouchTask.m; sourceTree = "<group>"; };
+		E55F54F322C2965E007896B4 /* ESP_WifiUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESP_WifiUtil.h; sourceTree = "<group>"; };
+		E55F54F422C2965E007896B4 /* ESP_ByteUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESP_ByteUtil.h; sourceTree = "<group>"; };
+		E55F54F522C2965E007896B4 /* ESP_NetUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESP_NetUtil.h; sourceTree = "<group>"; };
+		E55F54F622C2965E007896B4 /* ESP_WifiUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESP_WifiUtil.m; sourceTree = "<group>"; };
+		E55F54F722C2965E007896B4 /* ESPAES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPAES.m; sourceTree = "<group>"; };
+		E55F54F822C2965E007896B4 /* ESP_ByteUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESP_ByteUtil.m; sourceTree = "<group>"; };
+		E55F54F922C2965E007896B4 /* ESP_CRC8.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESP_CRC8.m; sourceTree = "<group>"; };
+		E55F54FA22C2965E007896B4 /* ESP_NetUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESP_NetUtil.m; sourceTree = "<group>"; };
+		E55F54FB22C2965E007896B4 /* ESPAES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPAES.h; sourceTree = "<group>"; };
+		E55F54FC22C2965E007896B4 /* ESP_CRC8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESP_CRC8.h; sourceTree = "<group>"; };
+		E55F54FD22C2965E007896B4 /* ESPVersionMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPVersionMacro.h; sourceTree = "<group>"; };
+		E55F554522C2968B007896B4 /* ESPDatumCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPDatumCode.m; sourceTree = "<group>"; };
+		E55F554622C2968C007896B4 /* ESPTouchGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPTouchGenerator.m; sourceTree = "<group>"; };
+		E55F554722C2968C007896B4 /* ESPTouchGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPTouchGenerator.h; sourceTree = "<group>"; };
+		E55F554822C2968C007896B4 /* ESPDataCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPDataCode.m; sourceTree = "<group>"; };
+		E55F554922C2968C007896B4 /* ESPDataCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPDataCode.h; sourceTree = "<group>"; };
+		E55F554A22C2968C007896B4 /* ESPGuideCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPGuideCode.h; sourceTree = "<group>"; };
+		E55F554B22C2968C007896B4 /* ESPDatumCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPDatumCode.h; sourceTree = "<group>"; };
+		E55F554C22C2968C007896B4 /* ESPGuideCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPGuideCode.m; sourceTree = "<group>"; };
+		E55F555222C296A9007896B4 /* ESPUDPSocketClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPUDPSocketClient.h; sourceTree = "<group>"; };
+		E55F555322C296A9007896B4 /* ESPUDPSocketServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPUDPSocketServer.m; sourceTree = "<group>"; };
+		E55F555422C296A9007896B4 /* ESPUDPSocketServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPUDPSocketServer.h; sourceTree = "<group>"; };
+		E55F555522C296A9007896B4 /* ESPUDPSocketClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPUDPSocketClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -436,6 +480,7 @@
 		E16C7C3322BB5C5700DC13CC /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				E55F54A522C2953A007896B4 /* SmartConfig */,
 				E16C7C7422BB63DF00DC13CC /* ZFChart */,
 			);
 			path = Vendors;
@@ -655,6 +700,75 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		E55F54A522C2953A007896B4 /* SmartConfig */ = {
+			isa = PBXGroup;
+			children = (
+				E55F555122C29698007896B4 /* UDP */,
+				E55F550322C2966D007896B4 /* Protocol */,
+				E55F54F222C29646007896B4 /* Util */,
+				E55F54E722C29613007896B4 /* ESPTouch */,
+			);
+			path = SmartConfig;
+			sourceTree = "<group>";
+		};
+		E55F54E722C29613007896B4 /* ESPTouch */ = {
+			isa = PBXGroup;
+			children = (
+				E55F54E822C2962B007896B4 /* ESPTouchDelegate.h */,
+				E55F54E922C2962B007896B4 /* ESPTouchResult.h */,
+				E55F54ED22C29634007896B4 /* ESPTouchResult.m */,
+				E55F54EA22C2962B007896B4 /* ESPTouchTask.h */,
+				E55F54EE22C29634007896B4 /* ESPTouchTask.m */,
+				E55F54EC22C29634007896B4 /* ESPTouchTaskParameter.h */,
+				E55F54EB22C29634007896B4 /* ESPTouchTaskParameter.m */,
+			);
+			path = ESPTouch;
+			sourceTree = "<group>";
+		};
+		E55F54F222C29646007896B4 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				E55F54F422C2965E007896B4 /* ESP_ByteUtil.h */,
+				E55F54F822C2965E007896B4 /* ESP_ByteUtil.m */,
+				E55F54FC22C2965E007896B4 /* ESP_CRC8.h */,
+				E55F54F922C2965E007896B4 /* ESP_CRC8.m */,
+				E55F54F522C2965E007896B4 /* ESP_NetUtil.h */,
+				E55F54FA22C2965E007896B4 /* ESP_NetUtil.m */,
+				E55F54F322C2965E007896B4 /* ESP_WifiUtil.h */,
+				E55F54F622C2965E007896B4 /* ESP_WifiUtil.m */,
+				E55F54FB22C2965E007896B4 /* ESPAES.h */,
+				E55F54F722C2965E007896B4 /* ESPAES.m */,
+				E55F54FD22C2965E007896B4 /* ESPVersionMacro.h */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		E55F550322C2966D007896B4 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				E55F554922C2968C007896B4 /* ESPDataCode.h */,
+				E55F554822C2968C007896B4 /* ESPDataCode.m */,
+				E55F554B22C2968C007896B4 /* ESPDatumCode.h */,
+				E55F554522C2968B007896B4 /* ESPDatumCode.m */,
+				E55F554A22C2968C007896B4 /* ESPGuideCode.h */,
+				E55F554C22C2968C007896B4 /* ESPGuideCode.m */,
+				E55F554722C2968C007896B4 /* ESPTouchGenerator.h */,
+				E55F554622C2968C007896B4 /* ESPTouchGenerator.m */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		E55F555122C29698007896B4 /* UDP */ = {
+			isa = PBXGroup;
+			children = (
+				E55F555222C296A9007896B4 /* ESPUDPSocketClient.h */,
+				E55F555522C296A9007896B4 /* ESPUDPSocketClient.m */,
+				E55F555422C296A9007896B4 /* ESPUDPSocketServer.h */,
+				E55F555322C296A9007896B4 /* ESPUDPSocketServer.m */,
+			);
+			path = UDP;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -747,10 +861,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E55F54FF22C2965E007896B4 /* ESPAES.m in Sources */,
 				E16C7CE022BB63DF00DC13CC /* ZFPie.m in Sources */,
 				E16C7CD322BB63DF00DC13CC /* ZFMethod.m in Sources */,
 				E16C7CC922BB63DF00DC13CC /* UIBezierPath+Zirkfied.m in Sources */,
+				E55F54FE22C2965E007896B4 /* ESP_WifiUtil.m in Sources */,
 				E16C7CDC22BB63DF00DC13CC /* ZFHorizontalBarChart.m in Sources */,
+				E55F555622C296A9007896B4 /* ESPUDPSocketServer.m in Sources */,
 				E16C7CE222BB63DF00DC13CC /* ZFTranslucencePath.m in Sources */,
 				E16C7CD422BB63DF00DC13CC /* ZFBar.m in Sources */,
 				E16C7CD822BB63DF00DC13CC /* ZFGenericAxis.m in Sources */,
@@ -758,6 +875,7 @@
 				E169BF2B22BCC43D000990BD /* ClientModel.m in Sources */,
 				E16C7C4F22BB5E3800DC13CC /* UITextView+PlaceHolder.m in Sources */,
 				E16C7CCB22BB63DF00DC13CC /* UIView+Zirkfied.m in Sources */,
+				E55F554F22C2968C007896B4 /* ESPDataCode.m in Sources */,
 				E16C7CD022BB63DF00DC13CC /* ZFCurveAttribute.m in Sources */,
 				E16C7CD522BB63DF00DC13CC /* ZFBarChart.m in Sources */,
 				E16C7CDF22BB63DF00DC13CC /* ZFLineChart.m in Sources */,
@@ -768,8 +886,11 @@
 				E16C7CD722BB63DF00DC13CC /* ZFCirqueChart.m in Sources */,
 				E16C7CCE22BB63DF00DC13CC /* ZFXAxisLine.m in Sources */,
 				E16C7CD922BB63DF00DC13CC /* ZFGenericChart.m in Sources */,
+				E55F554D22C2968C007896B4 /* ESPDatumCode.m in Sources */,
 				E16C7C1222BB56AB00DC13CC /* AppDelegate.m in Sources */,
+				E55F550122C2965E007896B4 /* ESP_CRC8.m in Sources */,
 				E16C7CD122BB63DF00DC13CC /* ZFGradientAttribute.m in Sources */,
+				E55F554E22C2968C007896B4 /* ESPTouchGenerator.m in Sources */,
 				E169BF2E22BCC7E0000990BD /* MainClientCell.m in Sources */,
 				E16C7CDE22BB63DF00DC13CC /* ZFLine.m in Sources */,
 				E55289A122BE52BA004EC3C3 /* DefaultViewCell.m in Sources */,
@@ -784,12 +905,17 @@
 				E16C7CE622BB63DF00DC13CC /* ZFWave.m in Sources */,
 				E16C7C6122BB61EE00DC13CC /* MainViewController.m in Sources */,
 				E16C7C4E22BB5E3800DC13CC /* UIView+LBExtension.m in Sources */,
+				E55F555722C296A9007896B4 /* ESPUDPSocketClient.m in Sources */,
 				E552899922BE3CC8004EC3C3 /* MainHeaderView.m in Sources */,
+				E55F54F022C29634007896B4 /* ESPTouchResult.m in Sources */,
+				E55F54F122C29634007896B4 /* ESPTouchTask.m in Sources */,
 				E16C7C5122BB5E3800DC13CC /* UIColor+HexStringColor.m in Sources */,
 				E143CE3D22C220C400766D9D /* MainLeftMenuView.m in Sources */,
 				E16C7CED22BB848E00DC13CC /* UIView+Extension.m in Sources */,
 				E169BF3122BCD1AF000990BD /* UIView+Toast.m in Sources */,
 				E55289A522BE58A6004EC3C3 /* ClientAlertView.m in Sources */,
+				E55F550222C2965E007896B4 /* ESP_NetUtil.m in Sources */,
+				E55F54EF22C29634007896B4 /* ESPTouchTaskParameter.m in Sources */,
 				E16C7C5E22BB61C100DC13CC /* BaseViewController.m in Sources */,
 				E169BF1922BC6CB2000990BD /* MQTTMessageModel.m in Sources */,
 				E16C7CD222BB63DF00DC13CC /* ZFConst.m in Sources */,
@@ -803,8 +929,10 @@
 				E16C7C5522BB5E3800DC13CC /* UIImage+Color.m in Sources */,
 				E16C7CE322BB63DF00DC13CC /* ZFPolygon.m in Sources */,
 				E16C7CDA22BB63DF00DC13CC /* ZFHorizontalAxis.m in Sources */,
+				E55F555022C2968C007896B4 /* ESPGuideCode.m in Sources */,
 				E16C7C5422BB5E3800DC13CC /* UIButton+EdgeInsets.m in Sources */,
 				E16C7C5622BB5E3800DC13CC /* UIImage+WLCompress.m in Sources */,
+				E55F550022C2965E007896B4 /* ESP_ByteUtil.m in Sources */,
 				E16C7CCD22BB63DF00DC13CC /* ZFPopoverLabel.m in Sources */,
 				E16C7C5022BB5E3800DC13CC /* UIImage+Gif.m in Sources */,
 				E16C7C5822BB5E3800DC13CC /* UIViewController+CustomNavigationBar.m in Sources */,

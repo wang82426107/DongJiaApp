@@ -67,7 +67,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        cell.textLabel.font = KContentTextFont;
+        cell.textLabel.font = KSubheadTextFont;
     }
     cell.imageView.image = [UIImage imageNamed:@"main_menu_connect_icon"];
     cell.textLabel.text = @"一键联网";
