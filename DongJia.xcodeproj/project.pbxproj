@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8B25DD349385800CEEDE1864 /* libPods-DongJia.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 142A6ABF5534F00655DEE71E /* libPods-DongJia.a */; };
+		E143CE3D22C220C400766D9D /* MainLeftMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = E143CE3C22C220C400766D9D /* MainLeftMenuView.m */; };
 		E169BF1922BC6CB2000990BD /* MQTTMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E169BF1822BC6CB2000990BD /* MQTTMessageModel.m */; };
 		E169BF2522BC9284000990BD /* SwitchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E169BF2422BC9284000990BD /* SwitchModel.m */; };
 		E169BF2B22BCC43D000990BD /* ClientModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E169BF2A22BCC43D000990BD /* ClientModel.m */; };
@@ -77,6 +78,8 @@
 		0BDD7F9F26BFACFFEA0AC1D0 /* Pods-DongJia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DongJia.release.xcconfig"; path = "Pods/Target Support Files/Pods-DongJia/Pods-DongJia.release.xcconfig"; sourceTree = "<group>"; };
 		0C70EDD897D0EC8A2D633111 /* Pods-DongJia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DongJia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DongJia/Pods-DongJia.debug.xcconfig"; sourceTree = "<group>"; };
 		142A6ABF5534F00655DEE71E /* libPods-DongJia.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DongJia.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E143CE3B22C220C400766D9D /* MainLeftMenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainLeftMenuView.h; sourceTree = "<group>"; };
+		E143CE3C22C220C400766D9D /* MainLeftMenuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainLeftMenuView.m; sourceTree = "<group>"; };
 		E169BF1722BC6CB2000990BD /* MQTTMessageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MQTTMessageModel.h; sourceTree = "<group>"; };
 		E169BF1822BC6CB2000990BD /* MQTTMessageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MQTTMessageModel.m; sourceTree = "<group>"; };
 		E169BF2322BC9284000990BD /* SwitchModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwitchModel.h; sourceTree = "<group>"; };
@@ -246,6 +249,8 @@
 				E55289A422BE58A6004EC3C3 /* ClientAlertView.m */,
 				E55289A622BE5F93004EC3C3 /* ClientAlertViewCell.h */,
 				E55289A722BE5F93004EC3C3 /* ClientAlertViewCell.m */,
+				E143CE3B22C220C400766D9D /* MainLeftMenuView.h */,
+				E143CE3C22C220C400766D9D /* MainLeftMenuView.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -781,6 +786,7 @@
 				E16C7C4E22BB5E3800DC13CC /* UIView+LBExtension.m in Sources */,
 				E552899922BE3CC8004EC3C3 /* MainHeaderView.m in Sources */,
 				E16C7C5122BB5E3800DC13CC /* UIColor+HexStringColor.m in Sources */,
+				E143CE3D22C220C400766D9D /* MainLeftMenuView.m in Sources */,
 				E16C7CED22BB848E00DC13CC /* UIView+Extension.m in Sources */,
 				E169BF3122BCD1AF000990BD /* UIView+Toast.m in Sources */,
 				E55289A522BE58A6004EC3C3 /* ClientAlertView.m in Sources */,

@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "MainLeftMenuView.h"
 #import "UIView+Extension.h"
 #import "ClientAlertView.h"
 #import "DefaultViewCell.h"
@@ -17,6 +18,8 @@
 
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
 
+@property(nonatomic,strong)MainLeftMenuView *menuView;
+@property(nonatomic,strong)UIButton *maskView;
 @property(nonatomic,strong)UIButton *menuButton;
 @property(nonatomic,strong)UIButton *userButton;
 @property(nonatomic,strong)UILabel *nameLabel;
@@ -52,12 +55,31 @@
 
 #pragma mark - 懒加载
 
+- (MainLeftMenuView *)menuView {
+    
+    if (_menuView == nil) {
+        _menuView = [[MainLeftMenuView alloc] initWithFrame:CGRectMake(-KmainWidth/2.0, 0, KmainWidth/2.0, KmainHeight)];
+    }
+    return _menuView;
+}
+
+- (UIButton *)maskView {
+    
+    if (_maskView == nil) {
+        _maskView = [[UIButton alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        _maskView.backgroundColor = KRGBAColor(0, 0, 0, 0);
+        [_maskView addTarget:self action:@selector(dismissMenuView) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _maskView;
+}
+
 - (UIButton *)menuButton {
     
     if (_menuButton == nil) {
         _menuButton = [[UIButton alloc] initWithFrame:CGRectMake(0, StatusHeight, NavigationBarHeight, NavigationBarHeight)];
         _menuButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
         [_menuButton setImage:[UIImage imageNamed:@"main_menu_icon"] forState:UIControlStateNormal];
+        [_menuButton addTarget:self action:@selector(showMenuViewAction) forControlEvents:UIControlEventTouchUpInside];
     }
     return _menuButton;
 }
@@ -66,13 +88,9 @@
     
     if (_userButton == nil) {
         _userButton = [[UIButton alloc] initWithFrame:CGRectMake(KNormalEdgeDistance, StatusHeight, NavigationBarHeight, NavigationBarHeight)];
-        _userButton.backgroundColor = [UIColor hexStringToColor:@"404040"];
-        _userButton.layer.cornerRadius = NavigationBarHeight/2.0;
         _userButton.userInteractionEnabled = NO;
-        _userButton.layer.masksToBounds = YES;
-        _userButton.layer.borderColor = KMainColor.CGColor;
-        _userButton.layer.borderWidth = 1.0f;
-        [_userButton setImage:[UIImage imageNamed:@"main_user_icon"] forState:UIControlStateNormal];
+        [_userButton setBackgroundImage:[UIImage imageNamed:@"main_user_no_select_icon"] forState:UIControlStateNormal];
+        [_userButton setBackgroundImage:[UIImage imageNamed:@"main_user_select_icon"] forState:UIControlStateSelected];
     }
     return _userButton;
 }
@@ -236,6 +254,38 @@
         [self.view.window addSubview:self.clientAlertView];
         [self.clientAlertView show];
     }
+}
+
+#pragma mark - 展示左滑菜单
+
+- (void)showMenuViewAction {
+
+    [self.view addSubview:self.maskView];
+    [self.view addSubview:self.menuView];
+    [UIView animateWithDuration:0.3 animations:^{
+        self.menuView.x = 0;
+        self.userButton.x = self.menuView.width + KNormalEdgeDistance;
+        self.nameLabel.x = self.userButton.right + KNormalViewDistance;
+        self.mqttStateView.x = self.userButton.right + KNormalViewDistance;
+        self.mqttStateLabel.x = self.mqttStateView.right + KNormalViewDistance;
+    } completion:^(BOOL finished) {
+        self.userButton.selected = YES;
+    }];
+}
+
+- (void)dismissMenuView {
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        self.menuView.x = -self.menuView.width;
+        self.userButton.x = KNormalEdgeDistance;
+        self.nameLabel.x = self.userButton.right + KNormalViewDistance;
+        self.mqttStateView.x = self.userButton.right + KNormalViewDistance;
+        self.mqttStateLabel.x = self.mqttStateView.right + KNormalViewDistance;
+    } completion:^(BOOL finished) {
+        self.userButton.selected = NO;
+        [self.maskView removeFromSuperview];
+        [self.menuView removeFromSuperview];
+    }];
 }
 
 #pragma mark - 接受到消息
