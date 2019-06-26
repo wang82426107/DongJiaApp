@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8B25DD349385800CEEDE1864 /* libPods-DongJia.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 142A6ABF5534F00655DEE71E /* libPods-DongJia.a */; };
+		E13030E922C37728000936E2 /* ESPUDPSocketClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E13030E622C37728000936E2 /* ESPUDPSocketClient.m */; };
+		E13030EA22C37728000936E2 /* ESPUDPSocketServer.m in Sources */ = {isa = PBXBuildFile; fileRef = E13030E722C37728000936E2 /* ESPUDPSocketServer.m */; };
 		E143CE3D22C220C400766D9D /* MainLeftMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = E143CE3C22C220C400766D9D /* MainLeftMenuView.m */; };
 		E169BF1922BC6CB2000990BD /* MQTTMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E169BF1822BC6CB2000990BD /* MQTTMessageModel.m */; };
 		E169BF2522BC9284000990BD /* SwitchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E169BF2422BC9284000990BD /* SwitchModel.m */; };
@@ -84,14 +86,15 @@
 		E55F554E22C2968C007896B4 /* ESPTouchGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = E55F554622C2968C007896B4 /* ESPTouchGenerator.m */; };
 		E55F554F22C2968C007896B4 /* ESPDataCode.m in Sources */ = {isa = PBXBuildFile; fileRef = E55F554822C2968C007896B4 /* ESPDataCode.m */; };
 		E55F555022C2968C007896B4 /* ESPGuideCode.m in Sources */ = {isa = PBXBuildFile; fileRef = E55F554C22C2968C007896B4 /* ESPGuideCode.m */; };
-		E55F555622C296A9007896B4 /* ESPUDPSocketServer.m in Sources */ = {isa = PBXBuildFile; fileRef = E55F555322C296A9007896B4 /* ESPUDPSocketServer.m */; };
-		E55F555722C296A9007896B4 /* ESPUDPSocketClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E55F555522C296A9007896B4 /* ESPUDPSocketClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0BDD7F9F26BFACFFEA0AC1D0 /* Pods-DongJia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DongJia.release.xcconfig"; path = "Pods/Target Support Files/Pods-DongJia/Pods-DongJia.release.xcconfig"; sourceTree = "<group>"; };
 		0C70EDD897D0EC8A2D633111 /* Pods-DongJia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DongJia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DongJia/Pods-DongJia.debug.xcconfig"; sourceTree = "<group>"; };
 		142A6ABF5534F00655DEE71E /* libPods-DongJia.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DongJia.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E13030E622C37728000936E2 /* ESPUDPSocketClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPUDPSocketClient.m; sourceTree = "<group>"; };
+		E13030E722C37728000936E2 /* ESPUDPSocketServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPUDPSocketServer.m; sourceTree = "<group>"; };
+		E13030E822C37728000936E2 /* ESPUDPSocketServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPUDPSocketServer.h; sourceTree = "<group>"; };
 		E143CE3B22C220C400766D9D /* MainLeftMenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainLeftMenuView.h; sourceTree = "<group>"; };
 		E143CE3C22C220C400766D9D /* MainLeftMenuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainLeftMenuView.m; sourceTree = "<group>"; };
 		E169BF1722BC6CB2000990BD /* MQTTMessageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MQTTMessageModel.h; sourceTree = "<group>"; };
@@ -248,9 +251,6 @@
 		E55F554B22C2968C007896B4 /* ESPDatumCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPDatumCode.h; sourceTree = "<group>"; };
 		E55F554C22C2968C007896B4 /* ESPGuideCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPGuideCode.m; sourceTree = "<group>"; };
 		E55F555222C296A9007896B4 /* ESPUDPSocketClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPUDPSocketClient.h; sourceTree = "<group>"; };
-		E55F555322C296A9007896B4 /* ESPUDPSocketServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPUDPSocketServer.m; sourceTree = "<group>"; };
-		E55F555422C296A9007896B4 /* ESPUDPSocketServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPUDPSocketServer.h; sourceTree = "<group>"; };
-		E55F555522C296A9007896B4 /* ESPUDPSocketClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPUDPSocketClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -762,9 +762,9 @@
 			isa = PBXGroup;
 			children = (
 				E55F555222C296A9007896B4 /* ESPUDPSocketClient.h */,
-				E55F555522C296A9007896B4 /* ESPUDPSocketClient.m */,
-				E55F555422C296A9007896B4 /* ESPUDPSocketServer.h */,
-				E55F555322C296A9007896B4 /* ESPUDPSocketServer.m */,
+				E13030E622C37728000936E2 /* ESPUDPSocketClient.m */,
+				E13030E822C37728000936E2 /* ESPUDPSocketServer.h */,
+				E13030E722C37728000936E2 /* ESPUDPSocketServer.m */,
 			);
 			path = UDP;
 			sourceTree = "<group>";
@@ -801,6 +801,11 @@
 				TargetAttributes = {
 					E16C7C0C22BB56AB00DC13CC = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.AccessWiFi = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -867,7 +872,6 @@
 				E16C7CC922BB63DF00DC13CC /* UIBezierPath+Zirkfied.m in Sources */,
 				E55F54FE22C2965E007896B4 /* ESP_WifiUtil.m in Sources */,
 				E16C7CDC22BB63DF00DC13CC /* ZFHorizontalBarChart.m in Sources */,
-				E55F555622C296A9007896B4 /* ESPUDPSocketServer.m in Sources */,
 				E16C7CE222BB63DF00DC13CC /* ZFTranslucencePath.m in Sources */,
 				E16C7CD422BB63DF00DC13CC /* ZFBar.m in Sources */,
 				E16C7CD822BB63DF00DC13CC /* ZFGenericAxis.m in Sources */,
@@ -902,10 +906,10 @@
 				E16C7CCC22BB63DF00DC13CC /* ZFLabel.m in Sources */,
 				E16C7CEA22BB68A200DC13CC /* MQTTManager.m in Sources */,
 				E55289A822BE5F93004EC3C3 /* ClientAlertViewCell.m in Sources */,
+				E13030E922C37728000936E2 /* ESPUDPSocketClient.m in Sources */,
 				E16C7CE622BB63DF00DC13CC /* ZFWave.m in Sources */,
 				E16C7C6122BB61EE00DC13CC /* MainViewController.m in Sources */,
 				E16C7C4E22BB5E3800DC13CC /* UIView+LBExtension.m in Sources */,
-				E55F555722C296A9007896B4 /* ESPUDPSocketClient.m in Sources */,
 				E552899922BE3CC8004EC3C3 /* MainHeaderView.m in Sources */,
 				E55F54F022C29634007896B4 /* ESPTouchResult.m in Sources */,
 				E55F54F122C29634007896B4 /* ESPTouchTask.m in Sources */,
@@ -921,6 +925,7 @@
 				E16C7CD222BB63DF00DC13CC /* ZFConst.m in Sources */,
 				E16C7CE122BB63DF00DC13CC /* ZFPieChart.m in Sources */,
 				E16C7CE522BB63DF00DC13CC /* ZFRadarChart.m in Sources */,
+				E13030EA22C37728000936E2 /* ESPUDPSocketServer.m in Sources */,
 				E16C7CE722BB63DF00DC13CC /* ZFWaveChart.m in Sources */,
 				E16C7C5722BB5E3800DC13CC /* UINavigationBar+BackgroundColor.m in Sources */,
 				E16C7CD622BB63DF00DC13CC /* ZFCirque.m in Sources */,
