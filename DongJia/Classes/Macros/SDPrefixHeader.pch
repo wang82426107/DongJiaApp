@@ -14,17 +14,15 @@
 
 //***********************MQTT相关***************************//
 
-#define AddressOfMQTTServer @"8iyfwyc.mqtt.iot.bj.baidubce.com"
+#define AddressOfMQTTServer @"主机地址"
 
 #define PortOfMQTTServer 1883
 
 #define PortOfMQTTServerWithSSL 1884
 
-#define MQTTUserName @"8iyfwyc/wwd"
+#define MQTTUserName @"用户账号"
 
-#define MQTTPassWord @"cFUYyUOg79IYgJFa"
-
-#define ThingPassWord @"5diTwg66Zi9wbhji"
+#define MQTTPassWord @"用户密码"
 
 //数据消息,只可订阅
 #define MQTTDataTopic @"Data"
@@ -37,17 +35,6 @@
 
 //遗嘱消息,发送与订阅
 #define MQTTWillTopic @"Will"
-
-//***********************接口网络***************************//
-
-//通用接口(正式)旧
-//#define KmainURL @"http://box.moduimen.com/api"
-
-//通用接口(正式)新
-#define KmainURL @"http://langbox.moduimen.com/api"
-
-//高德地图Key
-#define GaoDeMapKey @"260f6abb326c0a4dca595d1c28d1bd27"
 
 
 //#ifdef DEBUG
